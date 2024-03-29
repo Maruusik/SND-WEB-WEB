@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0">
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+    <body>
+        <!--Task input form-->
+        <div class="Task-form">
+            <input type="text" id="task-input" placeholder="add a new task">
+            <button onclick="addTask()">add Task</button>
+        </div>
+        <!-- Task list -->
+        <ul id="task-list"></ul>
+        <!-- Firebase SDK -->
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCAJoLP_g1-AIjHfKs7NSAai7BOhH_5XMQ",
+              authDomain: "sevice-next-door.firebaseapp.com",
+              projectId: "sevice-next-door",
+              storageBucket: "sevice-next-door.appspot.com",
+              messagingSenderId: "777726691223",
+              appId: "1:777726691223:web:f987ad7862136561ae26d2",
+              measurementId: "G-CYV9L5KM8K"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+          
+        .task-form button:hover {
+            background-color: #45a049;
+        }
+        .task-item {
+            list-style-type: none;
+            margin-top; 10px;
+        }
+        .task-item span {
+            margin-right: 10px;
+        }
+        .tas-item button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            curser; pointer;
+            margin-left: 10px;
+        }
+        .task-item button:hover{
+            background-color: #cc0000;
+        }
+
+          }
+    </body>
+</html>
